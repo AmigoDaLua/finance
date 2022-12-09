@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+
+<p><h2>Buy a stock</h2></p>
+
+<form action="/buy" method="post">
+    <div class="form-group">
+        <input autocomplete="off" autofocus class="form-control" name="symbol" placeholder="stock symbol" type="text">
+    </div>
+    <div class="form-group">
+        <input class="form-control" name="shares" placeholder="shares" type="number">
+    </div>
+    <button class="btn btn-primary" type="submit">Buy</button>
+</form>
+
+<div style="padding-top: 50px">
+
+    <p>
+              Don't know any stock symbols? <a target="_blank" href="https://stockanalysis.com/trending/">Start here</a>.</p>
+
+      </div>
+
+{% endblock %}

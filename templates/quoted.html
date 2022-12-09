@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Stock(s) quoted
+{% endblock %}
+
+{% block main %}
+<p><h2>Quotation</h2></p>
+<p>Right now 1 stock from {{stock['name']}} ({{stock['symbol']}}) is <strong>{{stock['price']}}</strong>. </p>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote a stock
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="post">
+        <div class="form-group">
+            <p><h2>Quote a stock</h2></p>
+            <input autocomplete="off" autofocus class="form-control" name="symbol" placeholder="stock symbol" type="text">
+        </div>
+        <div>
+           <button class="btn btn-primary" type="submit">Search now</button>
+        </div>
+    </form>
+
+
+    <div style="padding-top: 50px">
+
+  <p>
+            Don't know any stock symbols? <a target="_blank" href="https://stockanalysis.com/trending/">Start here</a>.</p>
+
+    </div>
+{% endblock %}

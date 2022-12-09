@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+<p><h2>Your funds</h2></p>
+<table align="center">
+    <thead>
+    <tr>
+        <td>   Cash  </td>
+        <td>   Total patrimony  </td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>{{ user_cash }}</td>
+        <td>{{ total_cash }}</td>
+    </tr>
+    </tbody>
+</table>
+
+
+<p><h2>Your stocks</h2></p>
+<table align="center">
+    <thead>
+    <tr>
+        <td>   Company Name   </td>
+        <td>   Stock   </td>
+        <td>   Shares   </td>
+        <td>   Current price   </td>
+        <td>   Total shares value   </td>
+    </tr>
+    </thead>
+    <tbody>
+        {% for stock in stocks %}
+    <tr>
+        <td>{{ stock["name"] }}</td>
+        <td>{{ stock["symbol"] }}</td>
+        <td>{{ stock["shares"] }}</td>
+        <td>{{ stock["price"] }}</td>
+        <td>{{ stock["shares_value"] }}</td>
+    </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+
+{% endblock %}
